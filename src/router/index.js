@@ -1,15 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Recommend from 'components/recommend/recommend'
+import Singer from 'components/singer/singer'
+import Rank from 'components/rank/rank'
+import Search from 'components/search/search'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 吧根目录也重定向一下
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/recommend'
+    },
+    {
+      path: '/recommend',
+      component: Recommend
+    },
+    {
+      path: '/singer',
+      component: Singer
+    },
+    {
+      path: '/rank',
+      component: Rank
+    },
+    {
+      path: '/search',
+      component: Search
     }
   ]
 })
