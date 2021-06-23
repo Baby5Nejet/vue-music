@@ -10,6 +10,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     // 吧根目录也重定向一下
+    // 路由大小写不明感，path建议默认小写
     {
       path: '/',
       redirect: '/recommend'
